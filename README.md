@@ -4,7 +4,7 @@ Prognoza pogody z modelu **UM 4 km** [Meteo ICM UW](https://meteo.pl) na ekran e
 (800×480) w [LaraPaper](https://github.com/usetrmnl/larapaper) lub TRMNL.
 Po polsku, z ikonami [Meteocons](https://github.com/basmilius/meteocons), bez klucza API.
 
-![Podgląd](podglad.png)
+![Podgląd](assets/screen.png)
 
 ## Co pokazuje
 
