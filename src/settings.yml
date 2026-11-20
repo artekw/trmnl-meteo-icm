@@ -1,0 +1,25 @@
+---
+name: Pogoda ICM
+strategy: polling
+refresh_interval: 360
+polling_verb: post
+polling_url: https://devmgramapi.meteo.pl/meteorograms/um4_120
+polling_headers: content-type=application/json
+polling_body: |-
+  {"point":{"lat":"{{ lat }}","lon":"{{ lon }}"},"date":{{ 'now' | date: '%s' | minus: 21600 | divided_by: 43200 | times: 43200 }} }
+custom_fields:
+- keyname: location_name
+  field_type: string
+  name: Nazwa miejscowości
+  description: Wyświetlana na ekranie
+  default: Suwałki
+- keyname: lat
+  field_type: string
+  name: Szerokość geograficzna
+  description: Np. 54.1118 (kropka, nie przecinek)
+  default: "54.1118"
+- keyname: lon
+  field_type: string
+  name: Długość geograficzna
+  description: Np. 22.9309 (kropka, nie przecinek)
+  default: "22.9309"
